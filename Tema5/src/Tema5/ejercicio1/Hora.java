@@ -73,7 +73,7 @@ public class Hora {
 	public void inc() {
 
 		this.minuto++;
-		if (this.minuto == 60) {
+		if (this.minuto >= 60) {
 			this.minuto = 0;
 			this.hora++;
 		}
@@ -85,7 +85,7 @@ public class Hora {
 	public String toString() {
 		String cadena = "";
 
-		cadena += this.hora + ":" + this.minuto;
+		cadena += this.hora + " horas, " + this.minuto + " minutos";
 
 		return cadena;
 	}

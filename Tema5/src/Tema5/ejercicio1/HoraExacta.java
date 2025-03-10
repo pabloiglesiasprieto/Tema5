@@ -42,8 +42,25 @@ public class HoraExacta extends Hora {
 		return cambiado;
 	}
 
+	/**
+	 * Override de clase Hora.
+	 */
 	public void inc() {
-		
+		this.segundos++;
+		super.inc();
+		if (this.segundos >= 60) {
+			this.segundos = 0;
+			this.minuto++;
+		}
+	}
+
+	/**
+	 * Override método toString de la clase Hora.
+	 */
+	public String toString() {
+		String cadena;
+		cadena = super.toString() + " y " + this.segundos + " segundos.";
+		return cadena;
 	}
 
 }
