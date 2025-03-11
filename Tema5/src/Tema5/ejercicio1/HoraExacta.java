@@ -47,10 +47,12 @@ public class HoraExacta extends Hora {
 	 */
 	public void inc() {
 		this.segundos++;
-		super.inc();
 		if (this.segundos >= 60) {
 			this.segundos = 0;
 			this.minuto++;
+		}
+		if (minuto >= 60) {
+			super.inc();
 		}
 	}
 
