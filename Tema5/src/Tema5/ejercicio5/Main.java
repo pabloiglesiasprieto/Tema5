@@ -61,15 +61,41 @@ public class Main {
 
 				// Creamos el objeto.
 				Poligono t1 = new Triangulo(lado1, lado2, lado3);
-				
+
 				// Añadimos el objeto a la lista.
-
+				PoligonoCRUD.añadirPoligono(t1);
 			}
+			// Segundo case.
+			case 2 -> {
 
+				// Preguntamos la longitud de los 2 lados.
+				System.out.println("Introduce la longitud del primer lado");
+
+				// Leemos entrada de teclado.
+				lado1 = sc.nextInt();
+
+				// Preguntamos la longitud de los 2 lados.
+				System.out.println("Introduce la longitud del segundo lado");
+
+				// Leemos entrada de teclado.
+				lado2 = sc.nextInt();
 			}
+			// Tercer case.
+			case 3 -> {
 
+				// Llamamos a la función que imprime los poligonos.
+				PoligonoCRUD.mostrarPoligonos();
+			}
+			}
+			// Imprimimos el menú.
+			menu();
+
+			// Preguntamos la acción que quiera realizar.
+			System.out.println("Que acción quiere realizar.");
+
+			// Leemos entrada de teclado.
+			eleccion = sc.nextInt();
 		}
-
 	}
 
 	// Función que imprime el menú.

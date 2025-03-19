@@ -42,7 +42,7 @@ public class Triangulo extends Poligono {
 			this.lado1 = lado1;
 			this.lado2 = lado2;
 			this.lado3 = lado3;
-			this.numeroLados = 3;
+
 		}
 	}
 
@@ -61,7 +61,7 @@ public class Triangulo extends Poligono {
 	public String toString() {
 		String cadena = "";
 
-		cadena += "Figura: Rectangulo " + "Número de lados: " + this.numeroLados;
+		cadena += "Figura: Triangulo " + super.toString();
 
 		return cadena;
 	}
@@ -71,7 +71,7 @@ public class Triangulo extends Poligono {
 	 */
 	public double area() {
 		double area;
-		double semiperimetro = (lado1 + lado2 + lado2) / 2;
+		double semiperimetro = (lado1 + lado2 + lado3) / 2;
 		area = Math.sqrt(semiperimetro * (semiperimetro - lado1) * (semiperimetro - lado2) * (semiperimetro - lado3));
 
 		return area;
