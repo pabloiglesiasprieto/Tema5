@@ -38,11 +38,21 @@ public class Socio implements Comparable<Socio> {
 	}
 
 	/**
-	 * Compara objetos y devuelve cual es mayor o menor que otro.
+	 * Override compareTo, si el id es mayor, se pondrá primero, si es menor, se
+	 * pondrá detras y si son iguales no se añadirá.
 	 */
-	@Override
 	public int compareTo(Socio o) {
-		return 0;
+		int comparable;
+
+		if (this.id > o.id) {
+			comparable = 1;
+		} else if (this.id < o.id) {
+			comparable = 0;
+		} else {
+			comparable = -1;
+		}
+		return comparable;
+
 	}
 
 	/**
