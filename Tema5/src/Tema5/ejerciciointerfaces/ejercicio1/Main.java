@@ -59,18 +59,45 @@ public class Main {
 
 				// Leemos entrada de teclado.
 				edad = sc.nextInt();
+
+				// Creamos el socio.
+				Socio s1 = new Socio(id, nombre, edad);
+
+				// Agregamos el socio a la colección.
+				Socio.agregarSocio(s1);
 			}
+			// Segundo case.
 			case 2 -> {
 
-			}
+				// Llamamos a la función que ordena la lista.
+				Socio.ordenarLista();
 
 			}
+			// Tercer case.
+			case 3 -> {
+
+				// Llamamos a la función que muestra los socios.
+				Socio.mostrarLista();
+			}
+			}
+			// Imprimimos el menú.
+			imprimirMenu();
+
+			// Preguntamos la acción.
+			System.out.println("Que acción quieres realizar.");
+
+			// Leemos entrada de teclado.
+			eleccion = sc.nextInt();
+
+			// Limpiamos Scanner.
+			sc.nextLine();
+
 		}
 	}
 
 	static void imprimirMenu() {
 
-		System.out.println("1.Añadir Socio.\n2.Ordenar lista\n0.Imprimir Socios.");
+		System.out.println("1.Añadir Socio.\n2.Ordenar lista\n3.Imprimir Socios.\n0.Salir.");
 	}
 
 }

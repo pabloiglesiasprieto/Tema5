@@ -1,9 +1,17 @@
 package Tema5.ejerciciointerfaces.ejercicio1;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 /**
  * Clase Socio.
  */
 public class Socio implements Comparable<Socio> {
+
+	/**
+	 * Lista de socios.
+	 */
+	public static ArrayList<Socio> listaSocios = new ArrayList<>();
 
 	/**
 	 * Atributo que identificará al Socio.
@@ -38,6 +46,34 @@ public class Socio implements Comparable<Socio> {
 	}
 
 	/**
+	 * Función que muestra la lista de socios.
+	 */
+	public static void mostrarLista() {
+
+		for (Socio socio : listaSocios) {
+			System.out.println(socio);
+		}
+
+	}
+
+	/**
+	 * Función que añade un socio a la lista.
+	 * 
+	 * @param s Socio a agregar a la lista.
+	 */
+	public static void agregarSocio(Socio s) {
+
+		listaSocios.add(s);
+	}
+
+	/**
+	 * Función que ordena la colección.
+	 */
+	public static void ordenarLista() {
+		Collections.sort(listaSocios);
+	}
+
+	/**
 	 * Override compareTo, si el id es mayor, se pondrá primero, si es menor, se
 	 * pondrá detras y si son iguales no se añadirá.
 	 */
@@ -47,9 +83,9 @@ public class Socio implements Comparable<Socio> {
 		if (this.id > o.id) {
 			comparable = 1;
 		} else if (this.id < o.id) {
-			comparable = 0;
-		} else {
 			comparable = -1;
+		} else {
+			comparable = 0;
 		}
 		return comparable;
 
