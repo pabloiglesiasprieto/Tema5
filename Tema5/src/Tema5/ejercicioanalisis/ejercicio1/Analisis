@@ -1,0 +1,52 @@
+class Vehiculo
+	enum Tipo {TURISMOS,CAMIONES,MOTOCILETAS}	
+	-	String marca
+	-	String modelo
+	- 	Stringo color
+	-	String matricula
+	-	boolean encendido
+	-	int marcha
+	- 	double velocidad
+	-	Tipo tipoCoche
+	
+	Vehiculo (String marca, String color, String modelo, String matricula)
+	getMarca()
+	getColor()
+	getModeo()
+	getMatricula()
+	getEncendido()
+	getMarcha()
+	getVelocidad()
+	
+	setColor(String color)
+	
+	+ void parar()	
+	+ void arrancar()	
+	+ void subirMarcha()	
+	+ void bajarMarcha()	
+________________________________________________________________________________________________________________________________________
+class Turismo extends Vehiculo
+	enum Uso {PROFESIONAL,PARTICULAR}
+	-	int numeroPlazas
+	-	Uso tipoDeUso
+	
+	+	Turismo (String marca, String color, String modelo, String matricula, int numeroPlazas, String uso)
+	
+	+	getnumeroPlazas()
+	+	gettipoDeUso()
+________________________________________________________________________________________________________________________________________	
+class Camion extends Vehiculo
+	-	double pesoMaximoAutorizado
+	-	boolean mercanciaPeligrosa
+	
+	Camion (String marca, String color, String modelo, String matricula, double pesoMaximoAutorizado, boolean mercanciaPeligrosa)
+	
+	+	getpesoMaximoAutorizado()
+	+	getmercanciaPeligrosa()
+	+	setmercanciaPeligrosa(boolean mercanciaPeligrosa<)
+________________________________________________________________________________________________________________________________________	
+class Motocicleta extends Vehiculo
+	-	int cilindrada
+	
+	+	void requiereCarnet()	
+	
