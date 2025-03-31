@@ -42,7 +42,7 @@ public class Vehiculo {
 	/**
 	 * Atributo privado de vehiculo que identificará la velocidad.
 	 */
-	private String velocidad;
+	private int velocidad;
 
 	/**
 	 * Atributo privado de vehiculo que identificará el tipo de vehiculo.
@@ -124,7 +124,7 @@ public class Vehiculo {
 	 * 
 	 * @return Velocidad del vehiculo.
 	 */
-	public String getVelocidad() {
+	public int getVelocidad() {
 		return this.velocidad;
 	}
 
@@ -141,28 +141,66 @@ public class Vehiculo {
 	 * Función que para el vehiculo.
 	 */
 	public void parar() {
-
+		this.encendido = false;
 	}
 
 	/**
 	 * Función que arranca el vehiculo.
 	 */
 	public void arrancar() {
-
+		this.encendido = true;
 	}
 
 	/**
 	 * Función que sube de marcha.
 	 */
-	public void subirMarcha() {
+	public void subirMarcha(int velocidad) {
+		if (velocidad > 0) {
+			this.velocidad += velocidad;
+		}
 
+		if (this.velocidad > 0 && this.velocidad < 30) {
+			this.marcha++;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad > 30 && this.velocidad < 50) {
+			this.marcha++;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad > 50 && this.velocidad < 70) {
+			this.marcha++;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad > 70 && this.velocidad < 100) {
+			this.marcha++;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad > 100) {
+			this.marcha++;
+			System.out.println("Estás en la marcha " + this.marcha);
+		}
 	}
 
 	/**
 	 * Función que baja de marcha.
 	 */
-	public void bajarMarcha() {
+	public void bajarMarcha(int velocidad) {
+		if (velocidad > 0) {
+			this.velocidad -= velocidad;
+		}
 
+		if (this.velocidad == 0) {
+			this.marcha--;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad < 30) {
+			this.marcha--;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad < 50) {
+			this.marcha--;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad < 70) {
+			System.out.println("Estás en la marcha " + this.marcha);
+			this.marcha--;
+			System.out.println("Estás en la marcha " + this.marcha);
+		} else if (this.velocidad < 100) {
+			this.marcha--;
+			System.out.println("Estás en la marcha " + this.marcha);
+		}
 	}
-
 }
