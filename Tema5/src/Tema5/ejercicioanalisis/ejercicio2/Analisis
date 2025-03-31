@@ -1,0 +1,108 @@
+abstract class Ficha {
+    private int id;
+    private String titulo;
+
+    public Ficha(int id, String titulo) {
+        this.id = id;
+        this.titulo = titulo;
+    }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public abstract String getTiempoPrestamo();
+}
+
+class Libro extends Ficha {
+    private String autor;
+    private String editorial;
+
+    public Libro(int id, String titulo, String autor, String editorial) {
+        super(id, titulo);
+        this.autor = autor;
+        this.editorial = editorial;
+    }
+
+    public String getAutor() { return autor; }
+    public void setAutor(String autor) { this.autor = autor; }
+
+    public String getEditorial() { return editorial; }
+    public void setEditorial(String editorial) { this.editorial = editorial; }
+
+    @Override
+    public String getTiempoPrestamo() {
+        return "15 días";
+    }
+}
+
+class Revista extends Ficha {
+    private int numeroRevista;
+    private String añoPublicacion;
+
+    public Revista(int id, String titulo, int numeroRevista, String añoPublicacion) {
+        super(id, titulo);
+        this.numeroRevista = numeroRevista;
+        this.añoPublicacion = añoPublicacion;
+    }
+
+    public int getNumeroRevista() { return numeroRevista; }
+    public void setNumeroRevista(int numeroRevista) { this.numeroRevista = numeroRevista; }
+
+    public String getAñoPublicacion() { return añoPublicacion; }
+    public void setAñoPublicacion(String añoPublicacion) { this.añoPublicacion = añoPublicacion; }
+
+    @Override
+    public String getTiempoPrestamo() {
+        return "10 días";
+    }
+}
+
+class DVD extends Ficha {
+    public enum Tipo { PELICULA, DOCUMENTAL, SERIE }
+
+    private String director;
+    private String año;
+    private Tipo tipo;
+
+    public DVD(int id, String titulo, String director, String año, Tipo tipo) {
+        super(id, titulo);
+        this.director = director;
+        this.año = año;
+        this.tipo = tipo;
+    }
+
+    public String getDirector() { return director; }
+    public void setDirector(String director) { this.director = director; }
+
+    public String getAño() { return año; }
+    public void setAño(String año) { this.año = año; }
+
+    public Tipo getTipo() { return tipo; }
+    public void setTipo(Tipo tipo) { this.tipo = tipo; }
+
+    @Override
+    public String getTiempoPrestamo() {
+        return "5 días";
+    }
+}
+
+class Biblioteca {
+    private ArrayList<Ficha> elementos;
+
+    public Biblioteca() {
+        elementos = new ArrayList<>();
+    }
+
+    public void agregarElemento(Ficha elemento) {
+        elementos.add(elemento);
+    }
+
+    public void listarPrestamos() {
+        for (Ficha f : elementos) {
+            System.out.println(f.getTitulo() + " - Préstamo: " + f.getTiempoPrestamo());
+        }
+    }
+}
