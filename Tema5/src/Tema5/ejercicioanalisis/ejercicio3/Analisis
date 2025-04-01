@@ -1,0 +1,41 @@
+Class CuentaBancaria
+	- String IBAN;
+	- double saldo;
+	- Titular[] titulares = new Titular[3]; (Mínimo 1 y máximo 3)
+	
+	+ ingresar(double dinero)
+	+ retirar(double dinero)
+______________________________________________________________________
+Class Titular
+	- String DNI
+	- String nombre
+	- String apellidos
+	- String telefono
+	
+______________________________________________________________________
+Class CuentaAhorro extends CuentaBancaria
+	- double cuotaMantenimiento;
+	- double interesAnual;
+	
+	+ void saldoConInteres()
+	+ void saldoConCuota()
+	
+______________________________________________________________________
+Class CuentaCorriente extends CuentaBancaria:
+	Atributos: 
+		- double cuotaTransaccion
+		- ArrayList<Transaccion> transacciones
+	Metodos:
+		+ transferencia (pasar dinero a otra cuenta, restandoselo a esta)
+		+ domiciliacion
+		+ get transaciones.size
+______________________________________________________________________
+Class Transaccion:
+	Atributos:
+		- int dia
+		- int mes
+		- int año
+		- String concepto
+		- double importe
+	Metodos:
+		+ toString
