@@ -35,7 +35,6 @@ public class Titular {
 	 * @param telefono  El número de teléfono del titular.
 	 */
 	public Titular(String dni, String nombre, String apellidos, int telefono) {
-		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
