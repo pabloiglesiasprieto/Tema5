@@ -108,4 +108,11 @@ public class CuentaBancaria {
 	public boolean eliminarTitular(Titular borrarTitular) {
 		return titulares.remove(borrarTitular);
 	}
+
+	public String toString() {
+
+		String cadena = "";
+
+		return cadena;
+	}
 }
