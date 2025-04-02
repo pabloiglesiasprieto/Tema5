@@ -1,0 +1,26 @@
+class AgendaTelefonica
+	- HashSet <Contacto> agenda;
+	
+	+ getContacto(String nombre)
+	
+	
+_________________________________________________________________________________________
+class Contacto
+	- String nombre;
+	- String telefono;
+	
+	+ getNombre()
+	+ getTelefono()
+	
+	+ boolean equals()
+	+ hashCode(String nombre)
+
+_________________________________________________________________________________________
+Class Persona extends Contacto
+	- String cumpleaños;
+	
+_________________________________________________________________________________________
+Class Empresa extends Contacto
+	- String website;
+	
+	+ getWebsite()
