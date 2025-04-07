@@ -1,0 +1,5 @@
+Define para la clase Socio los siguientes comparadores:
+Un comparador que ordene los nombres en orden alfabético.
+Un comparador que ordene los socios de más edad a menos edad.
+Comprueba en el método principal que los dos comparadores 
+funcionan correctamente.
