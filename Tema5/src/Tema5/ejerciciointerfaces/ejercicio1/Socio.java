@@ -45,6 +45,18 @@ public class Socio implements Comparable<Socio> {
 
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
 	/**
 	 * Función que muestra la lista de socios.
 	 */
@@ -69,8 +81,8 @@ public class Socio implements Comparable<Socio> {
 	/**
 	 * Función que ordena la colección.
 	 */
-	public static void ordenarLista() {
-		Collections.sort(listaSocios);
+	public static void ordenarListaPorNombre() {
+		Collections.sort(listaSocios, new OrdenaNombres());
 	}
 
 	/**

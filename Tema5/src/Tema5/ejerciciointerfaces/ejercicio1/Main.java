@@ -70,7 +70,7 @@ public class Main {
 			case 2 -> {
 
 				// Llamamos a la función que ordena la lista.
-				Socio.ordenarLista();
+				Socio.ordenarListaPorNombre();
 
 			}
 			// Tercer case.
@@ -97,7 +97,7 @@ public class Main {
 
 	static void imprimirMenu() {
 
-		System.out.println("1.Añadir Socio.\n2.Ordenar lista\n3.Imprimir Socios.\n0.Salir.");
+		System.out.println("1.Añadir Socio.\n2.Ordenar lista por Nombre.\n3.Imprimir Socios.\n0.Salir.");
 	}
 
 }
