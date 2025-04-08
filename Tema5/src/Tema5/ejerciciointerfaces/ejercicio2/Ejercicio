@@ -1,0 +1,4 @@
+Define para la clase Futbolista los siguientes comparadores:
+Un comparador que ordene los futbolistas por edad de forma ascendente.
+Un comparador que ordene los futbolistas de más goles a menos goles.
+Comprueba el funcionamiento de ambos comparadores en el método principal.

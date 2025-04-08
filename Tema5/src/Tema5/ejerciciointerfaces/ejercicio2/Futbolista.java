@@ -42,6 +42,22 @@ public class Futbolista implements Comparable<Futbolista> {
 
 	}
 
+	public int getNumeroCamiseta() {
+		return numeroCamiseta;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public int getNumeroGoles() {
+		return numeroGoles;
+	}
+
 	/**
 	 * 
 	 * Método toString de Futbolista @Override
