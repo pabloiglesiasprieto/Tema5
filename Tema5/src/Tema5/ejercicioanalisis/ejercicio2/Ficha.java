@@ -1,6 +1,6 @@
 package Tema5.ejercicioanalisis.ejercicio2;
 
-abstract class Ficha {
+abstract class Ficha implements Comparable<Ficha> {
 	protected int id;
 	protected String titulo;
 	protected String prestamo;

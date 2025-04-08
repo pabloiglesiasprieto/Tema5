@@ -47,4 +47,15 @@ class DVD extends Ficha {
 		System.out.println("DVD: " + titulo + ", ID: " + id + ", Director: " + director + ", Año: " + año + ", Tipo: "
 				+ tipo + ", Préstamo: " + prestamo);
 	}
+
+	@Override
+	public int compareTo(Ficha o) {
+		int orden = this.id - o.getId();
+		if (this.id < o.getId())
+			orden = -1;
+		if (this.id > o.getId())
+			orden = 1;
+		orden = 0;
+		return orden;
+	}
 }

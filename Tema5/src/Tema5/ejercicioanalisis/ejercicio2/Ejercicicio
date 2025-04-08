@@ -1,0 +1,3 @@
+Para la clase Ficha de la Biblioteca define los siguientes comparadores:
+El orden por defecto de las fichas de una biblioteca es el identificador en orden ascendente (interfaz Comparable).
+Además, define un comparador que permita ordenar las fichas en orden alfabético.
