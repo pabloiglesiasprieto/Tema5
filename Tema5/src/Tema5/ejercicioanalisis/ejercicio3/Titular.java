@@ -41,6 +41,22 @@ public class Titular {
 		this.telefono = telefono;
 	}
 
+	public String getDni() {
+		return dni;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public int getTelefono() {
+		return telefono;
+	}
+
 	/**
 	 * Representación en forma de cadena de los datos del titular.
 	 *
